@@ -24,7 +24,10 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl lg:text-7xl font-bold text-on-surface leading-[1.1] tracking-tight font-display"
           >
-            Hi! I'm SOHAN, <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-container">Web Developer Portfolio.</span>
+            Hi, I'm SOHAN{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-container">
+              Frontend Web Developer
+            </span>
           </motion.h1>
 
           <motion.p
@@ -33,7 +36,12 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg font-normal text-on-surface-variant max-w-xl leading-relaxed"
           >
-            I specialize in crafting high-performance, visually stunning software solutions for forward-thinking brands. Bridging the gap between design precision and engineering excellence.
+            I build modern, fast, and responsive web applications using React
+            and Next.js. I focus on clean UI design, smooth user experience,
+            and performance optimization.
+            <br /><br />
+            Currently, I’m improving my full-stack skills and preparing for
+            opportunities in professional software development teams.
           </motion.p>
 
           <motion.div
@@ -43,10 +51,11 @@ const Hero = () => {
             className="flex flex-wrap gap-4 pt-4"
           >
             <button className="btn btn-primary px-8 py-4 h-auto rounded-xl shadow-lg shadow-primary/20">
-              Let's Connect
+              Let’s Work Together
             </button>
+
             <button className="btn btn-outline px-8 py-4 h-auto rounded-xl hover:bg-on-surface/5 border-on-surface/20 text-on-surface">
-              See My Work
+              View My Projects
             </button>
           </motion.div>
         </div>

@@ -8,7 +8,7 @@ import SectionHeader from './SectionHeader';
 const Qualification = () => {
   return (
     <section id="qualification" className="max-w-7xl mx-auto px-8 pt-32 pb-32 relative">
-      <SectionHeader 
+      <SectionHeader
         subtitle="My personal journey"
         title="Qualification"
       />
@@ -19,7 +19,7 @@ const Qualification = () => {
 
         {/* Education Branch */}
         <div className="space-y-16">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -34,7 +34,7 @@ const Qualification = () => {
             { year: '2016 - 2018', title: 'Higher Secondary Certificate', institution: 'Notre Dame College' },
             { year: '2019 - 2023', title: 'B.Sc. in Computer Science', institution: 'BRAC University' }
           ].map((item, idx) => (
-            <div 
+            <div
               key={idx}
               className="relative flex md:justify-end"
             >
@@ -55,7 +55,7 @@ const Qualification = () => {
 
         {/* Experience Branch */}
         <div className="space-y-16 md:mt-32">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -69,7 +69,7 @@ const Qualification = () => {
             { year: '2023 - Present', title: 'Senior Product Designer', company: 'InnovateTech Solutions' },
             { year: '2021 - 2023', title: 'UI/UX Designer', company: 'Creative Flow Studio' }
           ].map((item, idx) => (
-            <div 
+            <div
               key={idx}
               className="relative flex"
             >

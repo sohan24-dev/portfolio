@@ -7,24 +7,24 @@ import SectionHeader from './SectionHeader';
 
 const projects = [
   {
-    title: 'Lumina Analytics Platform',
-    desc: 'An enterprise-grade data visualization suite for decentralized finance protocols.',
+    title: 'Lumina Analytics Dashboard',
+    desc: 'A modern analytics dashboard for tracking DeFi portfolio performance, on-chain activity, and real-time market trends with interactive charts.',
     tags: ['React', 'D3.js', 'Web3'],
     img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC-_RwdwH1I13R3JOg6C_MrrHrNJKnX3jFOqlyARN8ExihXv2j8hGqEdQsf4hX0aHM4yE3lXq-yQviV8Wi0fhx71_ylWPKOVB3GlutvbCuVQ6YLLDZSPJPtBNvjWLDXGxApEQ0qZDMdffxikO_8yU8X_adC5X6aPp2XKClH722dMMklK-prTuctS7P8gZv5WhjyzM9Oe_9cMUGnHfR3441UvFcqGdb5mdsapgaHRbw0HZfd9PegMZ7rNBdStmPusN3XDOoeFY4mDvc',
     link: '#',
     large: true
   },
   {
-    title: 'Vortex Mobile',
-    desc: 'High-performance asset tracking for digital creators and studios.',
+    title: 'Vortex Asset Tracker App',
+    desc: 'A cross-platform mobile application for digital creators to manage, track, and organize their media assets efficiently in real time.',
     tags: ['React Native', 'Firebase'],
     img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBn9jTeghMnK_7_LPm_CSgZImRsC4yKbPcSAQi2LpcVQ1YT7s48ZpQ4ru5ynY-vKJj2PuIbQLolR6NI13GKDHdLbnbpBnRdGHx_l90TxLm3JcnNsreMz2XFUyB-cgJWEwa4gZXGIdHfjldqkOD3YUUA_M_zJvlY5myLyPMzq-m4_kjpmOmQRdQOhgQ5TbiCWMZLcxTws6lHsnslwp-hLZjgjtRMzbr_GGRPONFzcov5u74Vz7Z-uuVFKz7eMWtYMIfFDd-fdm3MylE',
     link: '#',
     large: false
   },
   {
-    title: 'Echo OS',
-    desc: 'A conceptual operating system interface built for spatial computing.',
+    title: 'Echo OS Interface Concept',
+    desc: 'A futuristic operating system UI concept designed for spatial computing, focusing on immersive navigation and gesture-based interaction.',
     tags: ['Three.js', 'Next.js'],
     img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCNiWSnOFviz8pbDgHiBPNUuDV6bAleI1H9pKQacXSXhAAD3G-2kfpCY-j80BUn4AWk68VXfEuaDk6z5zUDmiBVzj8w2KAg8SlPdK0ogxxVyDHQQgMPYDhSz71aQdG3_o17TD4QIbY1qbZBh8O8ccEjlK1wDdJbE-MNjB0rDnwXvBRNREhiIcSf4KxLK8MpTWo09CDTi48I2WfzLQQMAW41IBfdVVoibFbQ1iN88gjZLTPYkDIz9R5G5OjFAF_u4WW555eqQERFevA',
     link: '#',
@@ -35,14 +35,14 @@ const projects = [
 const Projects = () => {
   return (
     <section id="projects" className="pt-32 pb-32">
-      <SectionHeader 
+      <SectionHeader
         subtitle="Selected Works"
         title="Featured Projects"
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-8">
         {projects.map((project, index) => (
-          <GlassCard 
+          <GlassCard
             key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ const Projects = () => {
           >
             {/* Project Image */}
             <div className="absolute inset-0">
-              <Image 
+              <Image
                 src={project.img}
                 alt={project.title}
                 fill
@@ -70,11 +70,11 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-              
+
               <h3 className={`${project.large ? 'text-4xl' : 'text-2xl'} font-display font-bold text-on-surface mb-4 leading-tight`}>
                 {project.title}
               </h3>
-              
+
               <p className="text-on-surface-variant text-sm max-w-lg mb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-2">
                 {project.desc}
               </p>
@@ -91,7 +91,7 @@ const Projects = () => {
 
             {/* Decorative Corner Icon */}
             <div className="absolute top-8 right-8 w-12 h-12 rounded-2xl bg-on-surface/5 backdrop-blur-xl border border-on-surface/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-               <span className="material-symbols-outlined text-primary">arrow_outward</span>
+              <span className="material-symbols-outlined text-primary">arrow_outward</span>
             </div>
           </GlassCard>
         ))}

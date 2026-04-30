@@ -3,10 +3,10 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 const stats = [
-  { label: 'Experience', value: '10+ Years', sub: 'In Digital Industry' },
-  { label: 'Performance', value: '1M+', sub: 'Coding Hours Logged' },
-  { label: 'Portfolio', value: '140+', sub: 'Projects Completed' },
-  { label: 'Trust', value: '500+', sub: 'Satisfied Clients' },
+  { label: 'Experience', value: '1+ Year', sub: 'Learning & Building Web Apps' },
+  { label: 'Practice', value: '1000+ Hours', sub: 'Frontend Development Practice' },
+  { label: 'Projects', value: '10+ Projects', sub: 'Personal & Learning Projects' },
+  { label: 'Growth', value: 'Daily', sub: 'Improving React & Next.js Skills' },
 ];
 
 import GlassCard from './GlassCard';
@@ -32,8 +32,8 @@ const Stats = () => {
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-32 max-w-7xl mx-auto px-8">
       {stats.map((stat, index) => (
-        <GlassCard 
-          key={index} 
+        <GlassCard
+          key={index}
           ref={(el) => (statsRef.current[index] = el)}
           className="p-8 rounded-2xl group hover:border-primary/50 transition-colors"
         >

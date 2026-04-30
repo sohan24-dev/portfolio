@@ -9,6 +9,7 @@ import GlassCard from './GlassCard';
 const About = () => {
   return (
     <section id="about" className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start mb-32">
+
       {/* Profile Sidebar */}
       <aside className="lg:col-span-4 space-y-8 sticky top-28">
         <GlassCard
@@ -27,27 +28,41 @@ const About = () => {
               />
             </div>
           </div>
+
           <div className="space-y-4">
-            <h1 className="font-display text-4xl font-bold text-on-surface leading-tight">SOHAN</h1>
+            <h1 className="font-display text-4xl font-bold text-on-surface leading-tight">
+              SOHAN
+            </h1>
+
             <p className="text-on-surface-variant text-base leading-relaxed">
-              Senior Full-Stack Architect specializing in high-performance digital systems and luxury UI/UX implementations.
+              Full-Stack Developer focused on building scalable, high-performance web applications with clean architecture and modern UI/UX systems.
             </p>
+
             <div className="flex gap-4 pt-4">
               {['alternate_email', 'hub', 'podcasts'].map((icon) => (
-                <Link key={icon} className="btn btn-ghost btn-circle btn-sm bg-on-surface/5 border-on-surface/10 text-primary hover:bg-primary hover:text-on-primary transition-all duration-300" href="#">
-                  <span className="material-symbols-outlined text-[20px]">{icon}</span>
+                <Link
+                  key={icon}
+                  className="btn btn-ghost btn-circle btn-sm bg-on-surface/5 border-on-surface/10 text-primary hover:bg-primary hover:text-on-primary transition-all duration-300"
+                  href="#"
+                >
+                  <span className="material-symbols-outlined text-[20px]">
+                    {icon}
+                  </span>
                 </Link>
               ))}
             </div>
+
             <button className="btn btn-primary w-full mt-6 rounded-xl font-semibold hover:shadow-lg shadow-primary/20 transition-all">
-              Let's Connect
+              Hire Me / Let’s Work Together
             </button>
           </div>
         </GlassCard>
       </aside>
 
-      {/* Main Bio Area */}
+      {/* Main Content */}
       <div className="lg:col-span-8 space-y-16">
+
+        {/* About */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -55,13 +70,17 @@ const About = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="space-y-8"
         >
-          <h2 className="font-display text-4xl font-bold text-on-surface">About Me</h2>
+          <h2 className="font-display text-4xl font-bold text-on-surface">
+            About Me
+          </h2>
+
           <div className="space-y-6 text-on-surface-variant text-lg leading-relaxed">
             <p>
-              I bridge the gap between complex backend engineering and pixel-perfect interface design. With over a decade of experience in building scalable web applications, I focus on creating digital experiences that are as robust as they are beautiful.
+              I am a passionate Full-Stack Developer who enjoys turning complex problems into simple, elegant, and scalable digital solutions. I specialize in modern web technologies and performance-focused architecture.
             </p>
+
             <p>
-              My approach is rooted in technical precision and architectural integrity. I believe that every line of code should serve a purpose, and every design element should guide the user journey seamlessly.
+              My development philosophy is centered around clean code, reusable components, and user-first design thinking. I aim to build applications that are fast, accessible, and visually refined.
             </p>
           </div>
         </motion.div>
@@ -74,10 +93,11 @@ const About = () => {
             viewport={{ once: true }}
             className="font-display text-2xl font-semibold text-on-surface border-l-4 border-primary pl-4"
           >
-            My Tech Stack
+            Tech Stack
           </motion.h3>
+
           <div className="flex flex-wrap gap-4">
-            {['HTML', 'CSS', 'Tailwind', 'React', 'JavaScript', 'Next.js', 'MongoDB'].map((tech, i) => (
+            {['HTML', 'CSS', 'Tailwind', 'JavaScript', 'React', 'Next.js', 'MongoDB'].map((tech, i) => (
               <GlassCard
                 key={tech}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -92,13 +112,15 @@ const About = () => {
                         tech === 'React' ? 'view_quilt' :
                           tech === 'Next.js' ? 'rocket_launch' : 'database'}
                 </span>
-                <span className="text-xs uppercase tracking-widest text-on-surface font-semibold">{tech}</span>
+                <span className="text-xs uppercase tracking-widest text-on-surface font-semibold">
+                  {tech}
+                </span>
               </GlassCard>
             ))}
           </div>
         </div>
 
-        {/* Experience Table */}
+        {/* Experience */}
         <div className="space-y-6">
           <motion.h3
             initial={{ opacity: 0, x: -20 }}
@@ -108,6 +130,7 @@ const About = () => {
           >
             Experience
           </motion.h3>
+
           <GlassCard
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -122,11 +145,12 @@ const About = () => {
                   <th className="text-primary uppercase tracking-widest font-semibold text-right">Period</th>
                 </tr>
               </thead>
+
               <tbody className="divide-y divide-on-surface/5">
                 {[
-                  { role: 'Principal Architect', company: 'Lumina Systems', period: '2021 — Present' },
-                  { role: 'Senior Software Engineer', company: 'Vortex Media', period: '2018 — 2021' },
-                  { role: 'Full Stack Developer', company: 'Creative Hub', period: '2015 — 2018' },
+                  { role: 'Senior Full-Stack Engineer', company: 'TechNova Solutions', period: '2022 — Present' },
+                  { role: 'Frontend Developer', company: 'PixelCraft Studio', period: '2019 — 2022' },
+                  { role: 'Junior Web Developer', company: 'Freelance / Remote Projects', period: '2017 — 2019' },
                 ].map((exp, idx) => (
                   <tr key={idx} className="hover:bg-on-surface/5 transition-colors border-none">
                     <td className="text-on-surface font-medium">{exp.role}</td>
@@ -138,10 +162,10 @@ const About = () => {
             </table>
           </GlassCard>
         </div>
+
       </div>
     </section>
   );
 };
-
 
 export default About;
