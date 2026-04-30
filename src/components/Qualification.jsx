@@ -30,9 +30,8 @@ const Qualification = () => {
           </motion.div>
 
           {[
-            { year: '2014 - 2016', title: 'Secondary School Certificate', institution: 'St. Joseph Higher Secondary School' },
-            { year: '2016 - 2018', title: 'Higher Secondary Certificate', institution: 'Notre Dame College' },
-            { year: '2019 - 2023', title: 'B.Sc. in Computer Science', institution: 'BRAC University' }
+            { year: '2021 - 2023', title: 'Secondary School Certificate (SSC)', institution: 'Khailkur Badshah Miah Agrani Ucca Bidyalaya & College' },
+            { year: '2023 - 2024', title: 'Higher Secondary Certificate (HSC)', institution: 'Khailkur Badshah Miah Agrani Ucca Bidyalaya & College' }
           ].map((item, idx) => (
             <div
               key={idx}
@@ -66,8 +65,16 @@ const Qualification = () => {
           </motion.div>
 
           {[
-            { year: '2023 - Present', title: 'Senior Product Designer', company: 'InnovateTech Solutions' },
-            { year: '2021 - 2023', title: 'UI/UX Designer', company: 'Creative Flow Studio' }
+            {
+              year: "2025 - Present",
+              title: "Junior Web Developer (Learning & Practice)",
+              company: "Personal Projects & Programming Hero"
+            },
+            {
+              year: "2024 - 2025",
+              title: "Frontend Development Learner (HTML, CSS, JavaScript)",
+              company: "Programming Hero"
+            }
           ].map((item, idx) => (
             <div
               key={idx}

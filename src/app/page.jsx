@@ -23,11 +23,11 @@ export default function Home() {
       <div className="absolute blur-[80px] -z-10 opacity-15 bg-secondary-container w-[400px] h-[400px] bottom-0 right-[-100px] rounded-full"></div>
 
       <Navbar />
-      
+
       <main className="max-w-7xl mx-auto pt-20 px-4 md:px-8">
         <Hero />
         <Stats />
-        <About />
+        <About></About>
         <Qualification />
         <Projects />
         <Services />

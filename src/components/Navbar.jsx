@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import ThemeToggle from './ThemeToggle';
 import SLogoPro from './SLogoPro';
+import Link from 'next/link';
 
 const navLinks = [
   { href: '#hero', label: 'Home', id: 'hero' },
@@ -80,9 +81,9 @@ const Navbar = () => {
           </button>
 
 
-          <a href="#hero" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <Link href="#hero" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <SLogoPro />
-          </a>
+          </Link>
 
         </div>
 
@@ -91,7 +92,7 @@ const Navbar = () => {
           <ul className="flex items-center gap-1">
             {navLinks.map((link) => (
               <li key={link.href} className="relative">
-                <a
+                <Link
                   href={link.href}
                   className={`px-5 py-2 text-xs uppercase tracking-widest font-bold transition-all duration-300 rounded-full block ${activeSection === link.id
                     ? 'text-on-surface'
@@ -99,7 +100,7 @@ const Navbar = () => {
                     }`}
                 >
                   {link.label}
-                </a>
+                </Link>
                 {activeSection === link.id && (
                   <motion.div
                     layoutId="activeTab"
@@ -129,19 +130,22 @@ const Navbar = () => {
             <ul className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     onClick={() => setIsMobileMenuOpen(false)}
                     href={link.href}
                     className={`flex items-center justify-between p-4 rounded-2xl transition-all ${activeSection === link.id
-                      ? 'bg-primary/20 text-on-surface border border-primary/30'
-                      : 'text-on-surface-variant/70 hover:bg-on-surface/5'
+                        ? 'bg-primary/20 text-on-surface border border-primary/30'
+                        : 'text-on-surface-variant/70 hover:bg-on-surface/5'
                       }`}
                   >
-                    <span className="font-bold tracking-widest uppercase text-sm">{link.label}</span>
+                    <span className="font-bold tracking-widest uppercase text-sm">
+                      {link.label}
+                    </span>
+
                     {activeSection === link.id && (
                       <span className="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_var(--primary)]"></span>
                     )}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

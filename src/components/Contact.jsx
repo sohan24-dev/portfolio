@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -7,6 +7,17 @@ import GlassCard from './GlassCard';
 import SectionHeader from './SectionHeader';
 
 const Contact = () => {
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const projectRef = useRef(null);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    nameRef.current.value = "";
+    emailRef.current.value = "";
+    projectRef.current.value = "";
+
+  };
   return (
     <section id="contact" className="max-w-7xl mx-auto px-8 pt-32 pb-32">
       <SectionHeader
@@ -23,9 +34,9 @@ const Contact = () => {
           </h2>
 
           {[
-            { label: 'Email', value: 'leo.carter@portfolio.dev', icon: 'mail' },
-            { label: 'LinkedIn', value: 'linkedin.com/in/leocarter', icon: 'link' },
-            { label: 'Twitter', value: '@leocarter_design', icon: 'alternate_email' }
+            { label: 'Email', value: 'sohan.explorer@gmail.com', icon: 'mail' },
+            { label: 'LinkedIn', value: 'https://www.linkedin.com/in/sohan-dev25', icon: 'link' },
+            { label: 'WhatsApp', value: '+8801608421930', icon: 'chat' }
           ].map((item, idx) => (
             <GlassCard key={idx} className="p-6 rounded-xl flex items-center gap-6 group hover:translate-x-2 transition-transform duration-300">
               <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
@@ -60,6 +71,7 @@ const Contact = () => {
               <div className="relative group">
                 <label className="absolute -top-3 left-4 px-2 bg-background text-primary text-[10px] font-bold tracking-widest uppercase z-10">Name</label>
                 <input
+                  ref={nameRef}
                   className="w-full bg-on-surface/5 border border-on-surface/10 rounded-xl px-6 py-4 text-on-surface placeholder:text-on-surface-variant/40 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all outline-none"
                   placeholder="Insert your name"
                   type="text"
@@ -68,6 +80,7 @@ const Contact = () => {
               <div className="relative group">
                 <label className="absolute -top-3 left-4 px-2 bg-background text-primary text-[10px] font-bold tracking-widest uppercase z-10">Email</label>
                 <input
+                  ref={emailRef}
                   className="w-full bg-on-surface/5 border border-on-surface/10 rounded-xl px-6 py-4 text-on-surface placeholder:text-on-surface-variant/40 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all outline-none"
                   placeholder="Insert your email"
                   type="email"
@@ -76,12 +89,13 @@ const Contact = () => {
               <div className="relative group">
                 <label className="absolute -top-3 left-4 px-2 bg-background text-primary text-[10px] font-bold tracking-widest uppercase z-10">Project</label>
                 <textarea
+                  ref={projectRef}
                   className="w-full bg-on-surface/5 border border-on-surface/10 rounded-xl px-6 py-4 text-on-surface placeholder:text-on-surface-variant/40 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all outline-none resize-none"
                   placeholder="Write your project details"
                   rows="6"
                 ></textarea>
               </div>
-              <button className="btn btn-primary w-full py-4 h-auto rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-3 text-lg font-bold" type="submit">
+              <button onClick={handleSubmit} className="btn btn-primary w-full py-4 h-auto rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-3 text-lg font-bold" type="submit">
                 Send Message
                 <span className="material-symbols-outlined">send</span>
               </button>

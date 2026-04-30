@@ -1,9 +1,21 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
 
+const links = [
+  { label: "GitHub", href: "https://github.com/sohan24-dev" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/sohan-dev25" },
+  { label: "Facebook", href: "https://facebook.com/rizbeahamedsohan" },
+  { label: "Email", href: "sohan.explorer@gmail.com" },
+];
+
 const Footer = () => {
+  const emailRef = useRef(null);
+  const handleSubscribe = () => {
+  // your logic here if needed
+  emailRef.current.value = ""; // clear input
+};
   return (
     <footer className="bg-background border-t border-on-surface/10 text-sm text-on-surface-variant">
 
@@ -36,13 +48,13 @@ const Footer = () => {
 
           <nav className="flex flex-col gap-3">
             {["About", "Projects", "Services", "Contact"].map((item) => (
-              <a
+              <Link
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 className="text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all duration-200"
               >
                 {item}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>
@@ -54,22 +66,23 @@ const Footer = () => {
           </h3>
 
           <div className="flex flex-col gap-3">
-            {["GitHub", "LinkedIn", "Twitter", "Email"].map((item) => (
+            {links.map((item) => (
               <Link
-                key={item}
-                href="#"
+                key={item.label}
+                href={item.href}
+                target={item.href.startsWith("http") ? "_blank" : "_self"}
                 className="flex items-center gap-3 text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all duration-200"
               >
                 <span className="material-symbols-outlined text-lg">
-                  {item === "GitHub"
+                  {item.label === "GitHub"
                     ? "terminal"
-                    : item === "LinkedIn"
+                    : item.label === "LinkedIn"
                       ? "hub"
-                      : item === "Twitter"
+                      : item.label === "Twitter"
                         ? "share"
                         : "mail"}
                 </span>
-                {item}
+                {item.label}
               </Link>
             ))}
           </div>
@@ -88,11 +101,12 @@ const Footer = () => {
           <div className="flex flex-col gap-3">
             <input
               type="email"
+              ref={emailRef}
               placeholder="Email address"
               className="w-full bg-background border border-on-surface/10 px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40 focus:outline-none focus:border-primary transition"
             />
 
-            <button className="bg-on-surface text-background hover:opacity-80 transition px-4 py-3 text-xs uppercase tracking-widest font-semibold">
+            <button onClick={handleSubscribe} className="btn bg-on-surface text-background hover:opacity-80 transition px-4 py-3 text-xs uppercase tracking-widest font-semibold">
               Subscribe
             </button>
           </div>
