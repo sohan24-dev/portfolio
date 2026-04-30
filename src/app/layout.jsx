@@ -13,7 +13,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata = {
-  title: "SOHAN | Digital Experiences",
+  title: "SOHAN",
   description:
     "Portfolio of SOHAN, specializing in crafting high-performance, visually stunning software solutions.",
 };
