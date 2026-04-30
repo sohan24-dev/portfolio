@@ -7,27 +7,27 @@ import SectionHeader from './SectionHeader';
 
 const projects = [
   {
-    title: 'Lumina Analytics Dashboard',
-    desc: 'A modern analytics dashboard for tracking DeFi portfolio performance, on-chain activity, and real-time market trends with interactive charts.',
-    tags: ['React', 'D3.js', 'Web3'],
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC-_RwdwH1I13R3JOg6C_MrrHrNJKnX3jFOqlyARN8ExihXv2j8hGqEdQsf4hX0aHM4yE3lXq-yQviV8Wi0fhx71_ylWPKOVB3GlutvbCuVQ6YLLDZSPJPtBNvjWLDXGxApEQ0qZDMdffxikO_8yU8X_adC5X6aPp2XKClH722dMMklK-prTuctS7P8gZv5WhjyzM9Oe_9cMUGnHfR3441UvFcqGdb5mdsapgaHRbw0HZfd9PegMZ7rNBdStmPusN3XDOoeFY4mDvc',
-    link: '#',
+    title: 'AuthFlow – Google Login System',
+    desc: 'A secure authentication system built with Next.js using Google OAuth. Includes protected routes, session handling, and user profile management.',
+    tags: ['Next.js', 'NextAuth', 'Google OAuth', 'Auth'],
+    img: 'https://i.ibb.co.com/LzmBFDTX/Screenshot-2026-05-01-012526.png',
+    link: 'https://pixgen09.vercel.app',
     large: true
   },
   {
-    title: 'Vortex Asset Tracker App',
-    desc: 'A cross-platform mobile application for digital creators to manage, track, and organize their media assets efficiently in real time.',
-    tags: ['React Native', 'Firebase'],
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBn9jTeghMnK_7_LPm_CSgZImRsC4yKbPcSAQi2LpcVQ1YT7s48ZpQ4ru5ynY-vKJj2PuIbQLolR6NI13GKDHdLbnbpBnRdGHx_l90TxLm3JcnNsreMz2XFUyB-cgJWEwa4gZXGIdHfjldqkOD3YUUA_M_zJvlY5myLyPMzq-m4_kjpmOmQRdQOhgQ5TbiCWMZLcxTws6lHsnslwp-hLZjgjtRMzbr_GGRPONFzcov5u74Vz7Z-uuVFKz7eMWtYMIfFDd-fdm3MylE',
-    link: '#',
+    title: 'DevBoard – Personal Dashboard',
+    desc: 'A clean developer dashboard to track projects, tasks, and daily productivity with a modern UI and reusable components.',
+    tags: ['React', 'Next.js', 'Tailwind'],
+    img: 'https://i.ibb.co.com/BVmVcymz/Screenshot-2026-05-01-012853.png',
+    link: 'https://our-restaurant-gilt.vercel.app/',
     large: false
   },
   {
-    title: 'Echo OS Interface Concept',
-    desc: 'A futuristic operating system UI concept designed for spatial computing, focusing on immersive navigation and gesture-based interaction.',
-    tags: ['Three.js', 'Next.js'],
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCNiWSnOFviz8pbDgHiBPNUuDV6bAleI1H9pKQacXSXhAAD3G-2kfpCY-j80BUn4AWk68VXfEuaDk6z5zUDmiBVzj8w2KAg8SlPdK0ogxxVyDHQQgMPYDhSz71aQdG3_o17TD4QIbY1qbZBh8O8ccEjlK1wDdJbE-MNjB0rDnwXvBRNREhiIcSf4KxLK8MpTWo09CDTi48I2WfzLQQMAW41IBfdVVoibFbQ1iN88gjZLTPYkDIz9R5G5OjFAF_u4WW555eqQERFevA',
-    link: '#',
+    title: 'Login UI System',
+    desc: 'A modern authentication UI design with form validation, loading states, and responsive layout built using React.',
+    tags: ['React', 'UI Design'],
+    img: 'https://i.ibb.co.com/zhzpCwpC/Screenshot-2026-05-01-013058.pngg',
+    link: 'https://as-07.vercel.app',
     large: false
   }
 ];
@@ -80,10 +80,10 @@ const Projects = () => {
               </p>
 
               <div className="flex items-center gap-4">
-                <Link href={project.link} className="btn btn-primary btn-sm rounded-xl px-6 font-bold tracking-tight">
+                <Link target='_blank'  href={project.link} className="btn btn-primary btn-sm rounded-xl px-6 font-bold tracking-tight">
                   View Case Study
                 </Link>
-                <Link href={project.link} className="btn btn-ghost btn-circle btn-sm bg-on-surface/5 border border-on-surface/10 text-on-surface hover:bg-primary transition-all">
+                <Link target='_blank' href={project.link} className="btn btn-ghost btn-circle btn-sm bg-on-surface/5 border border-on-surface/10 text-on-surface hover:bg-primary transition-all">
                   <span className="material-symbols-outlined text-sm">open_in_new</span>
                 </Link>
               </div>

@@ -11,7 +11,7 @@ const About = () => {
     <section id="about" className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start mb-32">
 
       {/* Profile Sidebar */}
-      <aside  className="lg:col-span-4 space-y-8 sticky top-28">
+      <aside className="lg:col-span-4 space-y-8 sticky top-28">
         <GlassCard
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -148,9 +148,21 @@ const About = () => {
 
               <tbody className="divide-y divide-on-surface/5">
                 {[
-                  { role: 'Senior Full-Stack Engineer', company: 'TechNova Solutions', period: '2022 — Present' },
-                  { role: 'Frontend Developer', company: 'PixelCraft Studio', period: '2019 — 2022' },
-                  { role: 'Junior Web Developer', company: 'Freelance / Remote Projects', period: '2017 — 2019' },
+                  {
+                    role: 'Web Development Student',
+                    company: 'Programming Hero',
+                    period: '2025 — Present'
+                  },
+                  {
+                    role: 'Frontend Practice Developer',
+                    company: 'Personal Learning Projects',
+                    period: '2023 — 2025'
+                  },
+                  {
+                    role: 'Beginner Web Learner',
+                    company: 'Self Learning (HTML & CSS)',
+                    period: '2022 — 2023'
+                  }
                 ].map((exp, idx) => (
                   <tr key={idx} className="hover:bg-on-surface/5 transition-colors border-none">
                     <td className="text-on-surface font-medium">{exp.role}</td>
