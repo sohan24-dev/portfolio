@@ -15,16 +15,16 @@ const projects = [
     large: true
   },
   {
-    title: 'DevBoard – Personal Dashboard',
-    desc: 'A clean developer dashboard to track projects, tasks, and daily productivity with a modern UI and reusable components.',
+    title: 'FoodNest – Restaurant & Food Ordering UI',
+    desc: 'A modern restaurant website featuring a clean UI to explore menus, view dishes, and enhance the dining experience with a smooth and user-friendly design',
     tags: ['React', 'Next.js', 'Tailwind'],
     img: 'https://i.ibb.co.com/BVmVcymz/Screenshot-2026-05-01-012853.png',
     link: 'https://our-restaurant-gilt.vercel.app/',
     large: false
   },
   {
-    title: 'Login UI System',
-    desc: 'A modern authentication UI design with form validation, loading states, and responsive layout built using React.',
+    title: 'Contact Hub UI System',
+    desc: 'A modern responsive contact UI built with React featuring form validation, real-time input feedback, loading states, and a clean design for smooth and easy communication.',
     tags: ['React', 'UI Design'],
     img: 'https://i.ibb.co.com/zhzpCwpC/Screenshot-2026-05-01-013058.pngg',
     link: 'https://as-07.vercel.app',
