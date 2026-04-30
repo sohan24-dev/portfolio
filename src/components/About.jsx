@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 import GlassCard from './GlassCard';
+import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const About = () => {
   return (
@@ -39,15 +40,30 @@ const About = () => {
             </p>
 
             <div className="flex gap-4 pt-4">
-              {['alternate_email', 'hub', 'podcasts'].map((icon) => (
+              {[
+                {
+                  icon: <FaFacebook />,
+                  href: "https://facebook.com/rizbeahamedsohan",
+                  key: "facebook",
+                },
+                {
+                  icon: <FaGithub />,
+                  href: "https://github.com/sohan24-dev",
+                  key: "github",
+                },
+                {
+                  icon: <FaLinkedin />,
+                  href: "https://www.linkedin.com/in/sohan-dev25",
+                  key: "linkedin",
+                },
+              ].map((item) => (
                 <Link
-                  key={icon}
+                  key={item.key}   // ✅ correct unique key
+                  href={item.href}
+                  target="_blank"
                   className="btn btn-ghost btn-circle btn-sm bg-on-surface/5 border-on-surface/10 text-primary hover:bg-primary hover:text-on-primary transition-all duration-300"
-                  href="#"
                 >
-                  <span className="material-symbols-outlined text-[20px]">
-                    {icon}
-                  </span>
+                  {item.icon}
                 </Link>
               ))}
             </div>
