@@ -12,7 +12,7 @@ const About = () => {
     <section id="about" className="grid grid-cols-1 md:grid-cols-12 gap-16 items-start ">
 
       {/* Profile Sidebar */}
-      <aside className="md:col-span-4 space-y-8 sticky top-28">
+      <aside className="md:col-span-5 space-y-8 sticky top-28">
         <GlassCard
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -76,7 +76,7 @@ const About = () => {
       </aside >
 
       {/* Main Content */}
-      <div className="md:col-span-8 space-y-16">
+      <div className="md:col-span-7 space-y-16">
 
         {/* About */}
         <motion.div
