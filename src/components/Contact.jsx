@@ -19,7 +19,7 @@ const Contact = () => {
 
   };
   return (
-    <section id="contact" className="max-w-7xl mx-auto px-8 pt-32 pb-32">
+    <section id="contact" className="max-w-7xl mx-auto px-8 ">
       <SectionHeader
         subtitle="Contact Me"
         title="Get in Touch"

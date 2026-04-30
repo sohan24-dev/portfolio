@@ -7,7 +7,7 @@ import SectionHeader from './SectionHeader';
 
 const Qualification = () => {
   return (
-    <section id="qualification" className="max-w-7xl mx-auto px-8 pt-32 pb-32 relative">
+    <section id="qualification" className="max-w-7xl mx-auto px-8 pt-32  relative">
       <SectionHeader
         subtitle="My personal journey"
         title="Qualification"

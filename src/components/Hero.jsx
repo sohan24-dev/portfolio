@@ -5,14 +5,16 @@ import GlassCard from './GlassCard';
 
 const Hero = () => {
   return (
-    <section id="hero" className="max-w-7xl mx-auto px-8 pt-20 pb-32 relative">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+    <section id="hero" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-20 sm:pb-28 lg:pb-32 relative">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16 items-center">
+
         {/* Content Column */}
-        <div className="lg:col-span-7 space-y-8">
+        <div className="md:col-span-7 space-y-6 sm:space-y-8">
+
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[12px] font-semibold uppercase tracking-wider"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[11px] sm:text-[12px] font-semibold uppercase tracking-wider"
           >
             <span className="material-symbols-outlined text-[14px]">bolt</span>
             Available for new projects
@@ -22,7 +24,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl lg:text-7xl font-bold text-on-surface leading-[1.1] tracking-tight font-display"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-on-surface leading-tight sm:leading-[1.1] tracking-tight font-display"
           >
             Hi, I'm SOHAN{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-container">
@@ -34,7 +36,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg font-normal text-on-surface-variant max-w-xl leading-relaxed"
+            className="text-sm sm:text-base lg:text-lg font-normal text-on-surface-variant max-w-xl leading-relaxed"
           >
             I build modern, fast, and responsive web applications using React
             and Next.js. I focus on clean UI design, smooth user experience,
@@ -48,32 +50,33 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-wrap gap-4 pt-4"
+            className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2 sm:pt-4"
           >
-            <button className="btn btn-primary px-8 py-4 h-auto rounded-xl shadow-lg shadow-primary/20">
+            <button className="btn btn-primary px-6 sm:px-8 py-3 sm:py-4 h-auto rounded-xl shadow-lg shadow-primary/20">
               Let’s Work Together
             </button>
 
-            <button className="btn btn-outline px-8 py-4 h-auto rounded-xl hover:bg-on-surface/5 border-on-surface/20 text-on-surface">
+            <button className="btn btn-outline px-6 sm:px-8 py-3 sm:py-4 h-auto rounded-xl hover:bg-on-surface/5 border-on-surface/20 text-on-surface">
               View My Projects
             </button>
           </motion.div>
         </div>
 
         {/* Image Column */}
-        <div className="lg:col-span-5 relative">
+        <div className="md:col-span-5 relative flex justify-center mt-6 lg:mt-0">
+
           <GlassCard
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="rounded-3xl overflow-hidden aspect-[4/5]"
+            className="rounded-3xl overflow-hidden w-[220px] sm:w-[260px] md:w-[300px] lg:w-[360px] aspect-[3/4]"
           >
             <Image
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               alt="High-end professional portrait of SOHAN"
               src="https://i.ibb.co.com/XrwPYnNc/unnamed.jpg"
-              width={600}
-              height={750}
+              width={360}
+              height={480}
               priority
             />
           </GlassCard>
@@ -83,15 +86,20 @@ const Hero = () => {
             initial={{ opacity: 0, rotate: 0 }}
             animate={{ opacity: 1, rotate: 12 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="absolute -top-6 -right-6 w-32 h-32 rounded-2xl flex items-center justify-center z-20"
+            className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-14 sm:w-16 lg:w-20 h-14 sm:h-16 lg:h-20 rounded-2xl flex items-center justify-center z-20"
           >
-            <span className="material-symbols-outlined text-primary text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>deployed_code</span>
+            <span
+              className="material-symbols-outlined text-primary text-2xl sm:text-3xl"
+              style={{ fontVariationSettings: "'FILL' 1" }}
+            >
+              deployed_code
+            </span>
           </GlassCard>
+
         </div>
       </div>
     </section>
   );
 };
-
 
 export default Hero;
