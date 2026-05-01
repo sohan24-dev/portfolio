@@ -69,14 +69,14 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="rounded-3xl overflow-hidden w-[220px] sm:w-[260px] md:w-[300px] lg:w-[360px] aspect-[3/4]"
+            className="relative rounded-3xl overflow-hidden w-full max-w-[360px] mx-auto aspect-[3/4]"
           >
             <Image
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
               alt="High-end professional portrait of SOHAN"
               src="https://i.ibb.co.com/XrwPYnNc/unnamed.jpg"
-              width={360}
-              height={480}
+              fill
+              sizes="(max-width: 640px) 100vw, 360px"
               priority
             />
           </GlassCard>
@@ -86,10 +86,20 @@ const Hero = () => {
             initial={{ opacity: 0, rotate: 0 }}
             animate={{ opacity: 1, rotate: 12 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-14 sm:w-16 lg:w-20 h-14 sm:h-16 lg:h-20 rounded-2xl flex items-center justify-center z-20"
+            className="
+    absolute 
+    top-0 right-0 
+    translate-x-1/4 -translate-y-1/4 
+    sm:translate-x-1/3 sm:-translate-y-1/3
+    w-12 h-12 
+    sm:w-14 sm:h-14 
+    lg:w-16 lg:h-16 
+    rounded-2xl flex items-center justify-center 
+    z-20
+  "
           >
             <span
-              className="material-symbols-outlined text-primary text-2xl sm:text-3xl"
+              className="material-symbols-outlined text-primary text-xl sm:text-2xl"
               style={{ fontVariationSettings: "'FILL' 1" }}
             >
               deployed_code
