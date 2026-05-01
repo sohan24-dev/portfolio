@@ -44,7 +44,7 @@ const Experience = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-2xl font-semibold text-on-surface border-l-4 border-primary pl-4"
+                className="font-display text-2xl font-semibold text-on-surface border-l-4 border-primary pl-4 mt-24"
             >
                 Experience
             </motion.h3>
