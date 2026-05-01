@@ -12,7 +12,7 @@ const About = () => {
     <section id="about" className="grid grid-cols-1 md:grid-cols-12 gap-16 items-start ">
 
       {/* Profile Sidebar */}
-      <aside className="md:col-span-5 space-y-8 sticky top-28">
+      <aside className="md:col-span-5 space-y-8 md:sticky md:top-28">
         <GlassCard
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -31,12 +31,19 @@ const About = () => {
           </div>
 
           <div className="space-y-4">
-            <h1 className="font-display text-4xl font-bold text-on-surface leading-tight">
+            <h1 className="font-display text-4xl sm:text-5xl font-bold text-on-surface leading-tight tracking-tight">
               SOHAN
             </h1>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-[2px] bg-primary rounded-full"></div>
+
+              <h3 className="text-lg sm:text-xl font-medium text-primary tracking-wide">
+                Frontend Web Developer
+              </h3>
+            </div>
 
             <p className="text-on-surface-variant text-base leading-relaxed">
-              Full-Stack Developer focused on building scalable, high-performance web applications with clean architecture and modern UI/UX systems.
+              Passionate about building modern, responsive & scalable web applications.
             </p>
 
             <div className="flex gap-4 pt-4">
@@ -58,7 +65,7 @@ const About = () => {
                 },
               ].map((item) => (
                 <Link
-                  key={item.key}   // ✅ correct unique key
+                  key={item.key}
                   href={item.href}
                   target="_blank"
                   className="btn btn-ghost btn-circle btn-sm bg-on-surface/5 border-on-surface/10 text-primary hover:bg-primary hover:text-on-primary transition-all duration-300"
@@ -73,7 +80,7 @@ const About = () => {
             </button>
           </div>
         </GlassCard>
-      </aside >
+      </aside>
 
       {/* Main Content */}
       <div className="md:col-span-7 space-y-16">
@@ -92,16 +99,21 @@ const About = () => {
 
           <div className="space-y-6 text-on-surface-variant text-lg leading-relaxed">
             <p>
-              I am a passionate Full-Stack Developer who enjoys turning complex problems into simple, elegant, and scalable digital solutions. I specialize in modern web technologies and performance-focused architecture.
+              I am a Junior Full-Stack Developer with a strong passion for building modern, responsive, and user-friendly web applications. My journey started with curiosity about how websites work, which led me to learn HTML and CSS, and gradually move into JavaScript, React, and Next.js. I am now expanding my skills toward full-stack development.
             </p>
 
             <p>
-              My development philosophy is centered around clean code, reusable components, and user-first design thinking. I aim to build applications that are fast, accessible, and visually refined.
+              I enjoy creating clean UI designs and solving real-world problems through code. I am especially interested in frontend development, where I can combine logic and creativity to build smooth and interactive user experiences.
             </p>
+
+            <p>
+              Outside of programming, I enjoy exploring new technologies, learning about UI/UX design, and improving my problem-solving skills. I also like spending time on self-development and staying updated with modern tech trends.
+            </p>
+
           </div>
         </motion.div>
 
-        {/* Tech Stack */}
+        {/* Interests */}
         <div className="space-y-6">
           <motion.h3
             initial={{ opacity: 0, x: -20 }}
@@ -109,87 +121,31 @@ const About = () => {
             viewport={{ once: true }}
             className="font-display text-2xl font-semibold text-on-surface border-l-4 border-primary pl-4"
           >
-            Tech Stack
+            Interests & Personality
           </motion.h3>
 
           <div className="flex flex-wrap gap-4">
-            {['HTML', 'CSS', 'Tailwind', 'JavaScript', 'React', 'Next.js', 'MongoDB'].map((tech, i) => (
+            {[
+              "Problem Solving",
+              "UI/UX Design",
+              "Learning New Tech",
+              "Self Growth",
+              "Creative Thinking"
+            ].map((item, i) => (
               <GlassCard
-                key={tech}
+                key={item}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: i * 0.1 }}
-                className="px-6 py-4 rounded-2xl flex items-center gap-3 group hover:border-primary/50 transition-colors"
+                className="px-6 py-3 rounded-xl text-sm font-medium text-on-surface hover:border-primary/50 transition-all"
               >
-                <span className="material-symbols-outlined text-primary">
-                  {tech === 'HTML' ? 'code' :
-                    tech === 'CSS' ? 'brush' :
-                      tech === 'Tailwind' ? 'architecture' :
-                        tech === 'React' ? 'view_quilt' :
-                          tech === 'Next.js' ? 'rocket_launch' : 'database'}
-                </span>
-                <span className="text-xs uppercase tracking-widest text-on-surface font-semibold">
-                  {tech}
-                </span>
+                {item}
               </GlassCard>
             ))}
           </div>
         </div>
 
-        {/* Experience */}
-        <div className="space-y-6">
-          <motion.h3
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="font-display text-2xl font-semibold text-on-surface border-l-4 border-primary pl-4"
-          >
-            Experience
-          </motion.h3>
 
-          <GlassCard
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="rounded-2xl overflow-hidden"
-          >
-            <table className="table w-full">
-              <thead className="bg-on-surface/5 border-b border-on-surface/10">
-                <tr>
-                  <th className="text-primary uppercase tracking-widest font-semibold">Role</th>
-                  <th className="text-primary uppercase tracking-widest font-semibold">Company</th>
-                  <th className="text-primary uppercase tracking-widest font-semibold text-right">Period</th>
-                </tr>
-              </thead>
-
-              <tbody className="divide-y divide-on-surface/5">
-                {[
-                  {
-                    role: 'Web Development Student',
-                    company: 'Programming Hero',
-                    period: '2025 — Present'
-                  },
-                  {
-                    role: 'Frontend Practice Developer',
-                    company: 'Personal Learning Projects',
-                    period: '2023 — 2025'
-                  },
-                  {
-                    role: 'Beginner Web Learner',
-                    company: 'Self Learning (HTML & CSS)',
-                    period: '2022 — 2023'
-                  }
-                ].map((exp, idx) => (
-                  <tr key={idx} className="hover:bg-on-surface/5 transition-colors border-none">
-                    <td className="text-on-surface font-medium">{exp.role}</td>
-                    <td className="text-on-surface-variant">{exp.company}</td>
-                    <td className="text-outline text-right">{exp.period}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </GlassCard>
-        </div>
 
       </div>
     </section>

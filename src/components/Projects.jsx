@@ -7,19 +7,21 @@ import SectionHeader from './SectionHeader';
 
 const projects = [
   {
-    title: 'AuthFlow – Google Login System',
+    title: 'Pixgen',
     desc: 'A secure authentication system built with Next.js using Google OAuth. Includes protected routes, session handling, and user profile management.',
     tags: ['Next.js', 'NextAuth', 'Google OAuth', 'Auth'],
     img: 'https://i.ibb.co.com/LzmBFDTX/Screenshot-2026-05-01-012526.png',
     link: 'https://pixgen09.vercel.app',
-    large: true
+   links: 'https://github.com/sohan24-dev/Pixgen02',
+    large: false
   },
   {
     title: 'FoodNest – Restaurant & Food Ordering UI',
     desc: 'A modern restaurant website featuring a clean UI to explore menus, view dishes, and enhance the dining experience with a smooth and user-friendly design',
     tags: ['React', 'Next.js', 'Tailwind'],
     img: 'https://i.ibb.co.com/BVmVcymz/Screenshot-2026-05-01-012853.png',
-    link: 'https://our-restaurant-gilt.vercel.app/',
+    link: 'https://our-restaurant-gilt.vercel.app',
+    links: 'https://github.com/sohan24-dev/Our-Restaurant',
     large: false
   },
   {
@@ -28,6 +30,7 @@ const projects = [
     tags: ['React', 'UI Design'],
     img: 'https://i.ibb.co.com/zhzpCwpC/Screenshot-2026-05-01-013058.pngg',
     link: 'https://as-07.vercel.app',
+    links: 'https://github.com/sohan24-dev/AS-07',
     large: false
   }
 ];
@@ -80,8 +83,8 @@ const Projects = () => {
               </p>
 
               <div className="flex items-center gap-4">
-                <Link target='_blank'  href={project.link} className="btn btn-primary btn-sm rounded-xl px-6 font-bold tracking-tight">
-                  View Case Study
+                <Link target='_blank'  href={project.links} className="btn btn-primary btn-sm rounded-xl px-6 font-bold tracking-tight">
+                  View Details
                 </Link>
                 <Link target='_blank' href={project.link} className="btn btn-ghost btn-circle btn-sm bg-on-surface/5 border border-on-surface/10 text-on-surface hover:bg-primary transition-all">
                   <span className="material-symbols-outlined text-sm">open_in_new</span>

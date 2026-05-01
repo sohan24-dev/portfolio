@@ -10,6 +10,7 @@ import Services from '@/components/Services';
 import Contact from '@/components/Contact';
 import DecorativeSection from '@/components/DecorativeSection';
 import Footer from '@/components/Footer';
+import Experience from '@/components/Experience';
 
 export default function Home() {
   useEffect(() => {
@@ -28,6 +29,7 @@ export default function Home() {
         <Hero />
         <Stats />
         <About></About>
+        <Experience></Experience>
         <Qualification />
         <Projects />
         <Services />
