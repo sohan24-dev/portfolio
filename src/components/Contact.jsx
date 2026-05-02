@@ -27,9 +27,11 @@ const Contact = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         {/* Left: Talk to me */}
-        <div className="lg:col-span-5 space-y-8">
+        <div className="col-span-1 lg:col-span-5 space-y-8 px-4 sm:px-0">
           <h2 className="text-2xl font-bold text-on-surface mb-8 flex items-center gap-3 font-display">
-            <span className="material-symbols-outlined text-primary">chat_bubble</span>
+            <span className="material-symbols-outlined text-primary">
+              chat_bubble
+            </span>
             Talk to me
           </h2>
 
@@ -38,18 +40,27 @@ const Contact = () => {
             { label: 'LinkedIn', value: 'https://www.linkedin.com/in/sohan-dev25', icon: 'link' },
             { label: 'WhatsApp', value: '+8801608421930', icon: 'chat' }
           ].map((item, idx) => (
-            <GlassCard key={idx} className="p-6 rounded-xl flex items-center gap-6 group hover:translate-x-2 transition-transform duration-300">
-              <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                <span className="material-symbols-outlined">{item.icon}</span>
+            <GlassCard
+              key={idx}
+              className="w-full p-6 rounded-xl flex items-center gap-4 sm:gap-6 group hover:translate-x-2 transition-transform duration-300"
+            >
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                <span className="material-symbols-outlined">
+                  {item.icon}
+                </span>
               </div>
-              <div>
-                <p className="text-on-surface-variant/70 text-xs uppercase tracking-wider font-semibold">{item.label}</p>
-                <p className="text-on-surface font-medium">{item.value}</p>
+              <div className="min-w-0">
+                <p className="text-on-surface-variant/70 text-xs uppercase tracking-wider font-semibold">
+                  {item.label}
+                </p>
+                <p className="text-on-surface font-medium break-all">
+                  {item.value}
+                </p>
               </div>
             </GlassCard>
           ))}
 
-          <GlassCard className="rounded-2xl overflow-hidden h-64 mt-12 relative">
+          <GlassCard className="rounded-2xl overflow-hidden h-48 sm:h-56 lg:h-64 mt-12 relative">
             <Image
               className="w-full h-full object-cover grayscale opacity-50"
               alt="SOHAN's workspace"
