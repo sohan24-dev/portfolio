@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ThemeToggle from './ThemeToggle';
 import SLogoPro from './SLogoPro';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const navLinks = [
   { href: '/#hero', label: 'Home', id: 'hero' },
@@ -16,30 +17,41 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [activeSection, setActiveSection] = useState('hero');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  // Update active section based on pathname for sub-pages
+  useEffect(() => {
+    if (pathname !== '/') {
+      const section = pathname.replace('/', '');
+      setActiveSection(section);
+    }
+  }, [pathname]);
 
   // Handle scroll effects (shadow/blur)
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      // Explicitly set hero active when at top
-      if (window.scrollY < 100) {
+      // Explicitly set hero active when at top on home page
+      if (pathname === '/' && window.scrollY < 100) {
         setActiveSection('hero');
       }
     };
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Initial check
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [pathname]);
 
-  // Scroll Spy with Intersection Observer
+  // Scroll Spy with Intersection Observer (only on home page)
   useEffect(() => {
+    if (pathname !== '/') return;
+
     const observerOptions = {
       root: null,
-      rootMargin: '-40% 0px -40% 0px', // Center-focused trigger
+      rootMargin: '-40% 0px -40% 0px',
       threshold: 0,
     };
 
@@ -59,7 +71,7 @@ const Navbar = () => {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   return (
     <nav

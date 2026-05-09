@@ -19,7 +19,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="max-w-7xl mx-auto px-8 scroll-mt-20">
+    <section id="contact" className="max-w-7xl mx-auto px-8 py-24 sm:py-32 scroll-mt-20">
       <SectionHeader
         subtitle="Contact Me"
         title="Get in Touch"

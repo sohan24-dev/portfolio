@@ -41,7 +41,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="pt-32 pb-32 space-y-12 scroll-mt-20">
+    <section id="services" className="py-24 sm:py-32 space-y-12 scroll-mt-20">
       <SectionHeader
         subtitle="What I can do for you"
         title="Services"

@@ -10,7 +10,7 @@ const About = () => {
   return (
     <section id="about" className="py-24 space-y-24 scroll-mt-20">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 items-start">
-        
+
         {/* Profile Sidebar */}
         <aside className="md:col-span-5 space-y-8 md:sticky md:top-28">
           <GlassCard
@@ -73,7 +73,7 @@ const About = () => {
 
         {/* Main Content */}
         <div className="md:col-span-7 space-y-16">
-          
+
           {/* Biography */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -85,7 +85,6 @@ const About = () => {
             <div className="space-y-4">
               <span className="text-primary font-bold tracking-[0.2em] uppercase text-xs">My Story</span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-on-surface leading-tight">
-                Crafting digital <span className="text-primary">experiences</span> that matter.
               </h2>
             </div>
 
@@ -101,20 +100,20 @@ const About = () => {
 
           {/* Core Values */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-             {[
-               { title: "Performance First", desc: "Optimizing for speed and efficiency in every line of code.", icon: "bolt" },
-               { title: "User Centric", desc: "Designing with the end-user in mind for intuitive experiences.", icon: "person" }
-             ].map((val, i) => (
-               <GlassCard key={i} className="p-6 rounded-3xl space-y-4 border-on-surface/5">
-                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <span className="material-symbols-outlined text-primary">{val.icon}</span>
-                 </div>
-                 <div className="space-y-1">
-                   <h4 className="font-bold text-on-surface">{val.title}</h4>
-                   <p className="text-sm text-on-surface-variant">{val.desc}</p>
-                 </div>
-               </GlassCard>
-             ))}
+            {[
+              { title: "Performance First", desc: "Optimizing for speed and efficiency in every line of code.", icon: "bolt" },
+              { title: "User Centric", desc: "Designing with the end-user in mind for intuitive experiences.", icon: "person" }
+            ].map((val, i) => (
+              <GlassCard key={i} className="p-6 rounded-3xl space-y-4 border-on-surface/5">
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-primary">{val.icon}</span>
+                </div>
+                <div className="space-y-1">
+                  <h4 className="font-bold text-on-surface">{val.title}</h4>
+                  <p className="text-sm text-on-surface-variant">{val.desc}</p>
+                </div>
+              </GlassCard>
+            ))}
           </div>
 
         </div>

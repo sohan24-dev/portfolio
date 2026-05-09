@@ -37,7 +37,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="pt-32 scroll-mt-20">
+    <section id="projects" className="py-24 sm:py-32 scroll-mt-20">
       <SectionHeader
         subtitle="Selected Works"
         title="Featured Projects"
