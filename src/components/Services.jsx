@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import Image from 'next/image';
 import GlassCard from './GlassCard';
@@ -40,7 +41,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="pt-32 pb-32 space-y-12">
+    <section id="services" className="pt-32 pb-32 space-y-12 scroll-mt-20">
       <SectionHeader
         subtitle="What I can do for you"
         title="Services"
@@ -59,7 +60,7 @@ const Services = () => {
                 </span>
               </div>
 
-              <h3 className="font-display text-2xl font-semibold text-on-surface mb-4">
+              <h3 className="font-display text-xl sm:text-2xl font-semibold text-on-surface mb-4">
                 {service.title}
               </h3>
 
@@ -87,7 +88,7 @@ const Services = () => {
         />
 
         <div className="relative z-10 h-full flex flex-col justify-end p-12 bg-gradient-to-t from-background to-transparent">
-          <h2 className="font-display text-4xl font-bold text-on-surface leading-tight">
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-on-surface leading-tight">
             Let’s build something meaningful together.
           </h2>
 

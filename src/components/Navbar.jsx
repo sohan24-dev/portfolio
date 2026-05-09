@@ -7,12 +7,12 @@ import SLogoPro from './SLogoPro';
 import Link from 'next/link';
 
 const navLinks = [
-  { href: '#hero', label: 'Home', id: 'hero' },
-  { href: '#about', label: 'About', id: 'about' },
-  { href: '#qualification', label: 'Qualification', id: 'qualification' },
-  { href: '#projects', label: 'Projects', id: 'projects' },
-  { href: '#services', label: 'Services', id: 'services' },
-  { href: '#contact', label: 'Contact', id: 'contact' },
+  { href: '/#hero', label: 'Home', id: 'hero' },
+  { href: '/#about', label: 'About', id: 'about' },
+  { href: '/#qualification', label: 'Qualification', id: 'qualification' },
+  { href: '/#projects', label: 'Projects', id: 'projects' },
+  { href: '/#services', label: 'Services', id: 'services' },
+  { href: '/#contact', label: 'Contact', id: 'contact' },
 ];
 
 const Navbar = () => {
@@ -81,7 +81,7 @@ const Navbar = () => {
           </button>
 
 
-          <Link href="#hero" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <Link href="/#hero" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <SLogoPro />
           </Link>
 

@@ -1,7 +1,6 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-
 import GlassCard from './GlassCard';
 import SectionHeader from './SectionHeader';
 
@@ -9,7 +8,7 @@ const Qualification = () => {
   return (
     <section
       id="qualification"
-      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-32 relative"
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-32 relative scroll-mt-20"
     >
       <SectionHeader
         subtitle="My personal journey"
@@ -138,6 +137,5 @@ const Qualification = () => {
     </section>
   );
 };
-
 
 export default Qualification;

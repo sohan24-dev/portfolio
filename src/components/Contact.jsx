@@ -2,7 +2,6 @@
 import React, { useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
 import GlassCard from './GlassCard';
 import SectionHeader from './SectionHeader';
 
@@ -10,16 +9,17 @@ const Contact = () => {
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const projectRef = useRef(null);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
     nameRef.current.value = "";
     emailRef.current.value = "";
     projectRef.current.value = "";
-
+    alert("Message sent successfully!");
   };
+
   return (
-    <section id="contact" className="max-w-7xl mx-auto px-8 ">
+    <section id="contact" className="max-w-7xl mx-auto px-8 scroll-mt-20">
       <SectionHeader
         subtitle="Contact Me"
         title="Get in Touch"
@@ -28,7 +28,7 @@ const Contact = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         {/* Left: Talk to me */}
         <div className="col-span-1 lg:col-span-5 space-y-8 px-4 sm:px-0">
-          <h2 className="text-2xl font-bold text-on-surface mb-8 flex items-center gap-3 font-display">
+          <h2 className="text-xl sm:text-2xl font-bold text-on-surface mb-8 flex items-center gap-3 font-display">
             <span className="material-symbols-outlined text-primary">
               chat_bubble
             </span>
@@ -74,7 +74,7 @@ const Contact = () => {
         {/* Right: Write me your project */}
         <div className="lg:col-span-7">
           <GlassCard className="p-8 rounded-2xl h-full">
-            <h2 className="text-2xl font-bold text-on-surface mb-10 flex items-center gap-3 font-display">
+            <h2 className="text-xl sm:text-2xl font-bold text-on-surface mb-10 flex items-center gap-3 font-display">
               <span className="material-symbols-outlined text-primary">edit_note</span>
               Write me your project
             </h2>
@@ -117,6 +117,5 @@ const Contact = () => {
     </section>
   );
 };
-
 
 export default Contact;

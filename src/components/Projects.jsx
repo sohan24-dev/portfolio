@@ -12,7 +12,7 @@ const projects = [
     tags: ['Next.js', 'NextAuth', 'Google OAuth', 'Auth'],
     img: 'https://i.ibb.co.com/LzmBFDTX/Screenshot-2026-05-01-012526.png',
     link: 'https://pixgen09.vercel.app',
-   links: 'https://github.com/sohan24-dev/Pixgen02',
+    links: 'https://github.com/sohan24-dev/Pixgen02',
     large: false
   },
   {
@@ -37,7 +37,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="pt-32 ">
+    <section id="projects" className="pt-32 scroll-mt-20">
       <SectionHeader
         subtitle="Selected Works"
         title="Featured Projects"
@@ -74,7 +74,7 @@ const Projects = () => {
                 ))}
               </div>
 
-              <h3 className={`${project.large ? 'text-4xl' : 'text-2xl'} font-display font-bold text-on-surface mb-4 leading-tight`}>
+              <h3 className={`${project.large ? 'text-2xl sm:text-3xl lg:text-4xl' : 'text-xl sm:text-2xl'} font-display font-bold text-on-surface mb-4 leading-tight`}>
                 {project.title}
               </h3>
 

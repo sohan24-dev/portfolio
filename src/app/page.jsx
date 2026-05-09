@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Stats from '@/components/Stats';
 import About from '@/components/About';
+import TechStack from '@/components/TechStack';
 import Qualification from '@/components/Qualification';
 import Projects from '@/components/Projects';
 import Services from '@/components/Services';
@@ -14,6 +15,7 @@ import Experience from '@/components/Experience';
 
 export default function Home() {
   useEffect(() => {
+    // Ensure scroll position is at top on refresh
     window.scrollTo(0, 0);
   }, []);
 
@@ -28,8 +30,9 @@ export default function Home() {
       <main className="max-w-7xl mx-auto pt-20 px-4 md:px-8">
         <Hero />
         <Stats />
-        <About></About>
-        <Experience></Experience>
+        <About />
+        <TechStack />
+        <Experience />
         <Qualification />
         <Projects />
         <Services />
@@ -41,4 +44,3 @@ export default function Home() {
     </div>
   );
 }
-

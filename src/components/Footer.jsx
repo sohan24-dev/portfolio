@@ -50,7 +50,7 @@ const Footer = () => {
             {["About", "Projects", "Services", "Contact"].map((item) => (
               <Link
                 key={item}
-                href={`#${item.toLowerCase()}`}
+                href={`/#${item.toLowerCase()}`}
                 className="text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all duration-200"
               >
                 {item}

@@ -16,7 +16,7 @@ const SectionHeader = ({ subtitle, title, centered = true, className = "" }) => 
           {subtitle}
         </span>
       )}
-      <h1 className="text-4xl lg:text-5xl font-bold text-on-surface font-display">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-on-surface font-display">
         {title}
       </h1>
     </motion.div>

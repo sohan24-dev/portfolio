@@ -1,5 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Image from 'next/image';
 import GlassCard from './GlassCard';
 
@@ -29,7 +30,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-on-surface leading-tight sm:leading-[1.1] tracking-tight font-display"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-on-surface leading-tight sm:leading-[1.1] tracking-tight font-display"
           >
             Hi, I'm SOHAN{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-container">
@@ -60,11 +61,14 @@ const Hero = () => {
             className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2 sm:pt-4"
           >
             {/* Primary */}
-            <button className="btn btn-primary px-6 sm:px-8 py-3 sm:py-4 h-auto rounded-xl shadow-lg shadow-primary/20">
+            <Link 
+              href="/#contact"
+              className="btn btn-primary px-6 sm:px-8 py-3 sm:py-4 h-auto rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center"
+            >
               Let’s Work Together
-            </button>
+            </Link>
             {/* Resume Download */}
-            <a
+            <Link
               href="/resume.pdf" // put your CV in /public folder
               download
               className="flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-xl border border-primary/30 text-primary hover:bg-primary/10 transition-all duration-300 text-sm sm:text-base font-medium"
@@ -73,7 +77,7 @@ const Hero = () => {
                 download
               </span>
               Download Resume
-            </a>
+            </Link>
           </motion.div>
         </div>
 
