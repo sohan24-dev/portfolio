@@ -2,6 +2,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -18,6 +19,9 @@ export const metadata = {
     "Portfolio of SOHAN, specializing in crafting high-performance, visually stunning software solutions.",
 };
 
+import SplashCursor from "@/components/SplashCursor";
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -31,7 +35,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} antialiased overflow-x-hidden`}
       >
+        <SplashCursor />
         <SmoothScroll>{children}</SmoothScroll>
+
       </body>
     </html>
   );
