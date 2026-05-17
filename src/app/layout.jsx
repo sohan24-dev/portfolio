@@ -20,6 +20,7 @@ export const metadata = {
 };
 
 import SplashCursor from "@/components/SplashCursor";
+import Chatbot from "@/components/Chatbot";
 
 
 export default function RootLayout({ children }) {
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
       >
         <SplashCursor />
         <SmoothScroll>{children}</SmoothScroll>
+        <Chatbot />
 
       </body>
     </html>
