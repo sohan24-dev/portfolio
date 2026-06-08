@@ -54,6 +54,7 @@ const Hero = () => {
           </motion.p>
 
           {/* Buttons */}
+          {/* Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -61,16 +62,18 @@ const Hero = () => {
             className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2 sm:pt-4"
           >
             {/* Primary */}
-            <Link 
+            <Link
               href="/#contact"
               className="btn btn-primary px-6 sm:px-8 py-3 sm:py-4 h-auto rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center"
             >
-              Let’s Work Together
+              Let&apos;s Work Together
             </Link>
+
             {/* Resume Download */}
             <Link
-              href="/resume.pdf" // put your CV in /public folder
-              download
+              href="https://drive.google.com/uc?export=download&id=1iD39qnfwBZM9E9nGZLTZTzEOFaxsV6X5"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-xl border border-primary/30 text-primary hover:bg-primary/10 transition-all duration-300 text-sm sm:text-base font-medium"
             >
               <span className="material-symbols-outlined text-[18px]">
