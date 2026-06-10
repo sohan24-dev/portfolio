@@ -34,7 +34,7 @@ const Hero = () => {
           >
             Hi, I'm SOHAN{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-container">
-              Frontend Web Developer
+              MERN Stack Developer
             </span>
           </motion.h1>
 
