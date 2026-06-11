@@ -72,7 +72,7 @@ const Hero = () => {
             {/* Resume Download */}
             <Link
               href="https://drive.google.com/uc?export=download&id=1iD39qnfwBZM9E9nGZLTZTzEOFaxsV6X5"
-              target="_blank"
+
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-xl border border-primary/30 text-primary hover:bg-primary/10 transition-all duration-300 text-sm sm:text-base font-medium"
             >
