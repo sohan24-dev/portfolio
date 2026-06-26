@@ -93,7 +93,7 @@ const Navbar = () => {
           </button>
 
 
-          <Link href="/hero" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <SLogoPro />
           </Link>
 
