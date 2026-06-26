@@ -63,7 +63,7 @@ const Hero = () => {
           >
             {/* Primary */}
             <Link
-              href="/#contact"
+              href="/contact"
               className="btn btn-primary px-6 sm:px-8 py-3 sm:py-4 h-auto rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center"
             >
               Let&apos;s Work Together
