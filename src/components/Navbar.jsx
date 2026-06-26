@@ -8,12 +8,12 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const navLinks = [
-  { href: '/#hero', label: 'Home', id: 'hero' },
-  { href: '/#about', label: 'About', id: 'about' },
-  { href: '/#qualification', label: 'Qualification', id: 'qualification' },
-  { href: '/#projects', label: 'Projects', id: 'projects' },
-  { href: '/#services', label: 'Services', id: 'services' },
-  { href: '/#contact', label: 'Contact', id: 'contact' },
+  { href: '/hero', label: 'Home', id: 'hero' },
+  { href: '/about', label: 'About', id: 'about' },
+  { href: '/qualification', label: 'Qualification', id: 'qualification' },
+  { href: '/projects', label: 'Projects', id: 'projects' },
+  { href: '/services', label: 'Services', id: 'services' },
+  { href: '/contact', label: 'Contact', id: 'contact' },
 ];
 
 const Navbar = () => {
@@ -93,7 +93,7 @@ const Navbar = () => {
           </button>
 
 
-          <Link href="/#hero" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <Link href="/hero" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <SLogoPro />
           </Link>
 
@@ -146,8 +146,8 @@ const Navbar = () => {
                     onClick={() => setIsMobileMenuOpen(false)}
                     href={link.href}
                     className={`flex items-center justify-between p-4 rounded-2xl transition-all ${activeSection === link.id
-                        ? 'bg-primary/20 text-on-surface border border-primary/30'
-                        : 'text-on-surface-variant/70 hover:bg-on-surface/5'
+                      ? 'bg-primary/20 text-on-surface border border-primary/30'
+                      : 'text-on-surface-variant/70 hover:bg-on-surface/5'
                       }`}
                   >
                     <span className="font-bold tracking-widest uppercase text-sm">
