@@ -9,7 +9,7 @@ const projects = [
   {
     title: 'Pixgen',
     desc: 'A secure authentication system built with Next.js using Google OAuth. Includes protected routes, session handling, and user profile management.',
-    tags: ['Next.js', 'NextAuth', 'Google OAuth', 'Auth'],
+    tags: ['Next.js', 'NextAuth', 'Google OAuth', 'Express.js', "MongoDB", 'Auth'],
     img: 'https://ibb.co.com/whVvnL8T',
     link: 'https://lawyer-10.vercel.app',
     links: 'https://github.com/sohan24-dev/AS_10',
