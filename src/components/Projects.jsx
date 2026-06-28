@@ -60,7 +60,7 @@ const Projects = () => {
                 fill
                 className="object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-110 transition-all duration-1000 ease-out"
               />
-              {/* Overlay Gradient */}
+
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
             </div>
 
